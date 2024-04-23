@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
+require("dotenv").config();
 
-const mongoURI =
-  "mongodb+srv://kpk79046:subscribers123@cluster0.qorp2oi.mongodb.net/?retryWrites=true&w=majority";
+const mongoURI = process.env.MONGO_URI;
+
+console.log(mongoURI);
 
 // Define an asynchronous function to connect to MongoDB
 const DBconnect = async () => {

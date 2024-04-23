@@ -1,7 +1,7 @@
 const express = require("express")
 const connect = require("./src/connect")
 const router=require("./src/router")
-  
+require("dotenv").config();
 
 const app = express()
 
@@ -11,7 +11,7 @@ app.use(router)
 
 connect()
 
-const PORT = 5000
+const PORT = process.env.PORT ||5000
 
 app.listen(PORT, () => {
   console.log(`Server is live on ${PORT} `)
